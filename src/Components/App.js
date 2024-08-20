@@ -40,9 +40,9 @@ function reducer(state, action) {
       const question = state.questions[state.index];
       return {
         ...state,
-        answer: action.payload,
+        answer: action.payLoad,
         points:
-          action.payload === question.correctOption
+          action.payLoad === question.correctOption
             ? state.points + question.points
             : state.points,
       };
